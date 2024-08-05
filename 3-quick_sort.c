@@ -45,7 +45,7 @@ int partition(int *array, int start, int end)
         int y; 
 
         x = start -1; /*1 less than start idx*/
-        for (int y = start; y < end; y++)
+        for (y = start; y < end; y++)
         { /*loop from start idx to end idx*/
                 if (array[y] < pivot)
                 { /*if current < pivot*/
