@@ -23,7 +23,7 @@ void recursive_sort(int *array, int start, int end)
  * @size: the size of the array
  * Return: void
  */
-void quick_sort(int *array, *size_t size)
+void quick_sort(int *array, size_t size)
 {
         if (!array || size < 2) /*checks if array is NULL or < 2*/
         {
