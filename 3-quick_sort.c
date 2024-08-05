@@ -51,7 +51,6 @@ int partition(int *array, int start, int end)
                 { /*if current < pivot*/
                         x++;
                         swap(&array[x], &array[y]); /*swaps current with element[x]*/
-                        print_array(array, size); /*prints array*/
                 }
         }
         swap(&array[x + 1], &array[end]);
