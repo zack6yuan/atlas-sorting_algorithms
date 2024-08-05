@@ -54,7 +54,7 @@ int partition(int *array, int start, int end)
                 }
         }
         swap_val(&array[x + 1], &array[end]);
-        print_array(array, size); /*print array*/
+        print_array(array, size_t); /*print array*/
 
         return (x + 1); /*return pivot's index*/
 }
@@ -64,7 +64,7 @@ int partition(int *array, int start, int end)
  * @y: the second element
  * Return: void
  */
-void swap(int *x, int *y)
+void swap_val(int *x, int *y)
 {
         int swap_val;
         swap_val = *x; /*store x in swap_val*/
