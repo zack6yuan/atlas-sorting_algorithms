@@ -29,6 +29,6 @@ void swap(listint_t **list, listint_t *node_one, listint_t *node_two);
 void print_list(const listint_t *list);
 void recursive_sort(int *array, int start, int end);
 int partition(int *array, int start, int end);
-void swap(int *x, int *y);
+void swap_val(int *x, int *y);
 
 #endif /*SORT_H*/

@@ -50,16 +50,16 @@ int partition(int *array, int start, int end)
                 if (array[y] < pivot)
                 { /*if current < pivot*/
                         x++;
-                        swap(&array[x], &array[y]); /*swaps current with element[x]*/
+                        swap_val(&array[x], &array[y]); /*swaps current with element[x]*/
                 }
         }
-        swap(&array[x + 1], &array[end]);
+        swap_val(&array[x + 1], &array[end]);
         print_array(array, size); /*print array*/
 
         return (x + 1); /*return pivot's index*/
 }
 /** 
- * swap - swaps two elements in array
+ * swap_val - swaps two elements in array
  * @x: the first element
  * @y: the second element
  * Return: void
