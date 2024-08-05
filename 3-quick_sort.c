@@ -38,7 +38,7 @@ void recursive_sort(int *array, int start, int end)
  * @end: the index (end) of the partition
  * Return: the pivot's index
  */
-int partition(int *array, int start, int end)
+int partition(int *array, int start, int end, size_t size)
 {
         int pivot = array[end]; /*array's last element*/
         int x;
@@ -51,7 +51,7 @@ int partition(int *array, int start, int end)
                 { /*if current < pivot*/
                         x++;
                         swap_val(&array[x], &array[y]); /*swaps current with element[x]*/
-                        print_array(array, size);
+                        print_array(array, size_t);
                 }
         }
         swap_val(&array[x + 1], &array[end]);
