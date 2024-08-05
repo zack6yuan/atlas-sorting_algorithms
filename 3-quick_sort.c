@@ -54,7 +54,7 @@ int partition(int *array, int start, int end)
                 }
         }
         swap_val(&array[x + 1], &array[end]);
-        print_array(array, size_t); /*print array*/
+        print_array(array, size); /*print array*/
 
         return (x + 1); /*return pivot's index*/
 }
