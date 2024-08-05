@@ -23,7 +23,7 @@ void swap(listint_t **list, listint_t *node_one, listint_t *node_two)
         node_one->next = node_two->next;
         node_two->prev = node_one ->prev;
         node_one->prev = node_two;
-        node_two->next = node_1;
+        node_two->next = node_one;
 }
 /**
  * insertion_sort - sorts a doubly linked list of integers 
@@ -35,7 +35,7 @@ void swap(listint_t **list, listint_t *node_one, listint_t *node_two)
  */
 void insertion_sort_list(listint_t **list)
 {
-        listint_t *node;
+        listint_t *current;
         listint_t *next_node;
 
         if (!list || !*list || !(*list))
@@ -45,7 +45,7 @@ void insertion_sort_list(listint_t **list)
         current = (*list)->next;
         while (current)
         {
-                next_node = current->*next;
+                next_node = current->next;
                 while (current->prev && current->prev->n > current->n)
                 {
                         swap(list, current->prev, current);
