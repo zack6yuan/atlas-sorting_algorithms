@@ -1,4 +1,10 @@
 #include "sort.h"
+
+void recursive_sort(int *array, int start, int end, size_t size);
+int partition(int *array, int start, int end, size_t size);
+void swap_val(int *x, int *y);
+/*define here because not called previously*/
+
 /**
  * quick_sort - sorts an array of integers in ascending 
  * order using the quick sort algorithm
@@ -41,10 +47,9 @@ void recursive_sort(int *array, int start, int end, size_t size)
 int partition(int *array, int start, int end, size_t size)
 {
         int pivot = array[end]; /*array's last element*/
-        int x;
+        int x = start - 1; /*1 less than start idx*/
         int y; 
 
-        x = start -1; /*1 less than start idx*/
         for (y = start; y < end; y++)
         { /*loop from start idx to end idx*/
                 if (array[y] < pivot)
