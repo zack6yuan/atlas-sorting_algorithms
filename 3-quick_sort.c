@@ -12,7 +12,7 @@ void quick_sort(int *array, size_t size)
         {
                 return; /*return nothing*/
         }
-        recursive_sort(array, 0, size -1); /*calls the recursive sort function*/
+        recursive_sort(array, 0, size -1, size); /*calls the recursive sort function*/
 }
 /**
  * recursive_sort - sorts a partition of an array recursively
