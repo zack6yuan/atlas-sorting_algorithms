@@ -21,12 +21,12 @@ void quick_sort(int *array, size_t size)
  * @end: the index (end) of the partition
  * Return: void
  */
-void recursive_sort(int *array, int start, int end)
+void recursive_sort(int *array, int start, int end, size_t size)
 {
         int pivot = 0;
         if (start < end) /*if start idx < end idx*/
         {
-                pivot = partition(array, start, end, size_t size); /*calls partition function*/
+                pivot = partition(array, start, end, size); /*calls partition function*/
                 recursive_sort(array, start, pivot -1); /*sort before pivot*/
                 recursive_sort(array, pivot + 1, end); /*sort after pivot*/
         }
