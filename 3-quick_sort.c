@@ -27,8 +27,8 @@ void recursive_sort(int *array, int start, int end, size_t size)
         if (start < end) /*if start idx < end idx*/
         {
                 pivot = partition(array, start, end, size); /*calls partition function*/
-                recursive_sort(array, start, pivot -1); /*sort before pivot*/
-                recursive_sort(array, pivot + 1, end); /*sort after pivot*/
+                recursive_sort(array, start, pivot -1, size); /*sort before pivot*/
+                recursive_sort(array, pivot + 1, end, size); /*sort after pivot*/
         }
 }
 /**
