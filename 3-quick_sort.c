@@ -1,10 +1,4 @@
 #include "sort.h"
-
-void recursive_sort(int *array, int start, int end, size_t size);
-int partition(int *array, int start, int end, size_t size);
-void swap_val(int *x, int *y);
-/*define here because not called previously*/
-
 /**
  * quick_sort - sorts an array of integers in ascending 
  * order using the quick sort algorithm
@@ -27,11 +21,12 @@ void quick_sort(int *array, size_t size)
  * @end: the index (end) of the partition
  * Return: void
  */
-void recursive_sort(int *array, size_t start, size_t end, size_t size)
+void recursive_sort(int *array, int start, int end, size_t size)
 {
+        int pivot = 0;
         if (start < end) /*if start idx < end idx*/
         {
-                size_t pivot = partition(array, start, end, size); /*calls partition function*/
+                pivot = partition(array, start, end, size); /*calls partition function*/
                 recursive_sort(array, start, pivot -1, size); /*sort before pivot*/
                 recursive_sort(array, pivot + 1, end, size); /*sort after pivot*/
         }
@@ -43,11 +38,11 @@ void recursive_sort(int *array, size_t start, size_t end, size_t size)
  * @end: the index (end) of the partition
  * Return: the pivot's index
  */
-int partition(int *array, size_t start, size_t end, size_t size)
+int partition(int *array, int start, int end, size_t size)
 {
         int pivot = array[end]; /*array's last element*/
-        size_t x = start - 1; /*1 less than start idx*/
-        size_t y; 
+        int x = start - 1; /*1 less than start idx*/
+        int y; 
 
         for (y = start; y < end; y++)
         { /*loop from start idx to end idx*/
