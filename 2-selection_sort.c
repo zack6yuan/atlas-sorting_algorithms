@@ -17,7 +17,7 @@ if (!array || size < 2) /*parameter*/
 {
 return;
 }
-for (x = 0; x < size -1; x++) /*loop*/
+for (x = 0; x < size - 1; x++) /*loop*/
 {
 min_val = x;
 for (y = x + 1; y < size; y++) /*loop*/
