@@ -21,12 +21,12 @@ if (node_two->next)
 node_two->next->prev = node_one;
 }
 node_one->next = node_two->next;
-node_two->prev = node_one ->prev;
+node_two->prev = node_one->prev;
 node_one->prev = node_two;
 node_two->next = node_one;
 }
 /**
- * insertion_sort - sorts a doubly linked list of integers 
+ * insertion_sort - sorts a doubly linked list of integers
  * in ascending orderusing the Insertion sort algorithm.
  * @list: the list that is being sorted
  * @node1: the first node
