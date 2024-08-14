@@ -26,7 +26,7 @@ node_one->prev = node_two;
 node_two->next = node_one;
 }
 /**
- * insertion_sort _list- sorts a doubly linked list of integers
+ * insertion_sort _list - sorts a doubly linked list of integers
  * in ascending orderusing the Insertion sort algorithm.
  * @list: the list that is being sorted
  * Return: void
