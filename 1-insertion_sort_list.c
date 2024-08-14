@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * insertion_sort _list - sorts a doubly linked list of integers
+ * insertion_sort_list - sorts a doubly linked list of integers
  * in ascending order using the Insertion sort algorithm.
  * @list: the list that is being sorted
  * Return: void
